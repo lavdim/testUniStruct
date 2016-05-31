@@ -1,16 +1,12 @@
-# imports: http://xmlns.com/foaf/spec/
+# imports: http://rdfs.org/sioc/ns#
 
 @prefix : <http://vocab.cs.uni-bonn.de/unistruct#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<http://vocab.cs.uni-bonn.de/unistruct>
-	a owl:Ontology ;
-	owl:imports <http://xmlns.com/foaf/spec/> ;
-	.
 
 :Bus
 	a owl:Class ;
@@ -20,6 +16,18 @@
 	.
 
 :MiniBus
-	a :Bus ;
+	a
+		:Bus ,
+		owl:NamedIndividual
+		;
 	rdfs:label "MiniBus"@en ;
+	.
+
+:Vehicle
+	a owl:Class ;
+	.
+
+_:blank1
+	a owl:Ontology ;
+	owl:imports <http://rdfs.org/sioc/ns#> ;
 	.
