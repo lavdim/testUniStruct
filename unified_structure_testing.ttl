@@ -1,5 +1,3 @@
-# imports: http://rdfs.org/sioc/ns#
-
 @prefix : <http://vocab.cs.uni-bonn.de/unistruct#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,6 +5,10 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.cs.uni-bonn.de/unistruct>
+	a owl:Ontology ;
+	.
 
 :Bus
 	a owl:Class ;
@@ -30,12 +32,14 @@
 	rdfs:label "MiniBus"@en ;
 	.
 
-:Vehicle
+:Train
 	a owl:Class ;
+	rdfs:subClassOf :Vehicle ;
+	rdfs:label "Train" ;
+	rdfs:comment "Train Concept" ;
 	.
 
-_:blank1
-	a owl:Ontology ;
-	owl:imports <http://rdfs.org/sioc/ns#> ;
+:Vehicle
+	a owl:Class ;
 	.
 
