@@ -21,6 +21,8 @@
 	rdfs:comment "Bus"@en ;
 	.
 
+
+
 :CarCar
 	a owl:Class ;
 	rdfs:subClassOf :Vehicle ;
