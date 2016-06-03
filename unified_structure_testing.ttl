@@ -23,7 +23,8 @@
 
 
 
-:CarCar
+	
+:CarCarCar
 	a owl:Class ;
 	rdfs:subClassOf :Vehicle ;
 	rdfs:label "Car" ;
